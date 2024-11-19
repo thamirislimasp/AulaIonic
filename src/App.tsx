@@ -1,8 +1,20 @@
-import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { Route, Redirect } from 'react-router';
+import { 
+  IonApp, 
+  IonRouterOutlet, 
+  setupIonicReact, 
+  IonTabs, 
+  IonTabBar, 
+  IonTabButton,
+  IonIcon,
+  IonLabel
+} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import { bookOutline, easelOutline } from 'ionicons/icons';
+
 import Home from './pages/Home';
 import Onboard from './pages/Onboard';
+import Inicio from './pages/Inicio';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -36,26 +48,38 @@ import './theme/variables.css';
 
 setupIonicReact();
 
-const App: React.FC = () => {
+
+//
+//
+const App = () => {
   return (
     <IonApp>
 
-      <IonReactRouter>        
-        <IonRouterOutlet>
+      <IonReactRouter> 
+        <IonTabs>   
           
-          <Route exact path="/onboard">
-            <Onboard />
-          </Route>
+          <IonRouterOutlet>            
+            <Redirect exact={true} path='/' to="/onboard" />
+            <Route  path="/onboard" render={() => <Onboard /> } />             
+            <Route  path="/home" render={() => <Inicio />  } />
+          </IonRouterOutlet>
 
-          <Route exact path="/home">
-            <Home />
-          </Route>
+          {
+            false && <IonTabBar slot="bottom">
 
-          <Route exact path="/">
-            <Redirect to="/onboard" />
-          </Route>
+            <IonTabButton tab="onboard" href="/onboard">
+              <IonIcon icon={easelOutline}></IonIcon>
+              <IonLabel>Onboard</IonLabel>
+            </IonTabButton>
 
-        </IonRouterOutlet>
+            <IonTabButton tab="home" href="/home">
+              <IonIcon icon={bookOutline}></IonIcon>
+              <IonLabel>Home</IonLabel>
+            </IonTabButton>
+
+          </IonTabBar>
+          }
+        </IonTabs>    
 
       </IonReactRouter>
 

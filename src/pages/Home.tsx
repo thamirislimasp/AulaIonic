@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonButton, IonIcon, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 
@@ -8,7 +8,7 @@ const Home = () => {
 
       <IonHeader>
         <IonToolbar>
-          <IonTitle>ok</IonTitle>
+          <IonTitle>Android</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -16,17 +16,13 @@ const Home = () => {
 
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
+            <IonTitle>Ios</IonTitle>
           </IonToolbar>
         </IonHeader>
-
-        <div id="container">
-          <strong>Ready to create an app?</strong>
-          <p>Start with Ionic 
-            <a target="_blank" rel="noopener noreferrer" 
-            href="https://ionicframework.com/docs/components">UI Components</a>
-          </p>
-        </div>
+    
+        <h1>Home page</h1>
+        
+      <IonButton expand="full">Full</IonButton>
 
       </IonContent>
 

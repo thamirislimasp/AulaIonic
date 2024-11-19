@@ -2,15 +2,23 @@ import { IonContent, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from '@
 import { bookOutline, easelOutline } from 'ionicons/icons';
 import BgTextura from "/public/onboard-background.svg";
 import BgTextura2 from "/public/onboard-background-2.svg";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import "./Onboard.css";
 
 function Onboard () {
     const [activeScreen, setActiveScreen] = useState(0);
     
-    function changeSlide (){
-        if (activeScreen > 0) {
-            setActiveScreen(0);
+    useEffect(() => {        
+
+    })
+
+    function closeOnBoard () {
+       window.location.href = '/home'
+    }
+    
+    function changeSlide () {
+        if (activeScreen >= 1) {
+            closeOnBoard();
             return;    
         }
         setActiveScreen(activeScreen + 1);
