@@ -8,39 +8,38 @@ import { IonTabs,
     IonButton
  } from "@ionic/react";
 
+import { bookOutline, easelOutline, heart } from 'ionicons/icons';
+
+import "./Inicio.scss";
+
 const Inicio = () => {
 
     return (
-        <>
-            <IonTabs>
-                <IonTab tab="tab-01">
-                   <IonContent>                                    
-                        <IonButton>
-                            Link
-                        </IonButton>
-                    </IonContent>               
-                </IonTab>
-                <IonTab tab="tab-02">
-                   <IonContent>
-                        Aba 2
-                    </IonContent>               
-                </IonTab>
+        <IonContent>
+            <div className="start-page">
+                <div className="image"></div>
+                <div className="info">
+                    <h2>
+                        <span>Seja bem-vindo </span>
+                        <strong>O que deseja fazer?</strong>
+                    </h2>
+                    <IonButton>
+                        <IonIcon icon={bookOutline}></IonIcon>
+                        <IonLabel>Estudar</IonLabel>
+                    </IonButton>
+                    
+                    <IonButton>
+                        <IonIcon icon={easelOutline}></IonIcon>
+                        <IonLabel>Dar aulas</IonLabel>
+                    </IonButton>
+                    <small>
+                        Total de 285 conexões <br />
+                        já realizadas  <IonIcon icon={heart}></IonIcon>
+                    </small>
+                </div>
 
-                <IonTabBar slot="bottom">
-
-                    <IonTabButton tab="tab-01">
-                        <IonLabel>01</IonLabel>
-                    </IonTabButton>
-
-                    <IonTabButton tab="tab-02">
-                        <IonLabel>02</IonLabel>
-                    </IonTabButton>
-
-                </IonTabBar>
-
-
-            </IonTabs>
-        </>
+            </div>
+        </IonContent>
     )
 }
 
