@@ -23,15 +23,19 @@ const Inicio = () => {
                         <span>Seja bem-vindo </span>
                         <strong>O que deseja fazer?</strong>
                     </h2>
-                    <IonButton>
-                        <IonIcon icon={bookOutline}></IonIcon>
-                        <IonLabel>Estudar</IonLabel>
-                    </IonButton>
-                    
-                    <IonButton>
-                        <IonIcon icon={easelOutline}></IonIcon>
-                        <IonLabel>Dar aulas</IonLabel>
-                    </IonButton>
+                    <div className="button-row">                            
+                        <IonButton>
+                            <IonIcon icon={bookOutline}></IonIcon>
+                            <IonLabel>Estudar</IonLabel>
+                        </IonButton>
+                        
+                        <IonButton>
+                            <div className="inner">                                
+                                <IonIcon icon={easelOutline}></IonIcon>
+                                <IonLabel>Dar aulas</IonLabel>
+                            </div>
+                        </IonButton>
+                    </div>
                     <small>
                         Total de 285 conexões <br />
                         já realizadas  <IonIcon icon={heart}></IonIcon>
