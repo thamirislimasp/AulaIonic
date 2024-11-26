@@ -9,7 +9,7 @@ import { IonTabs,
  } from "@ionic/react";
 
 import { bookOutline, easelOutline, heart } from 'ionicons/icons';
-
+import Ilustra from "/public/Ilustra.svg";
 import "./Inicio.scss";
 
 const Inicio = () => {
@@ -17,19 +17,24 @@ const Inicio = () => {
     return (
         <IonContent>
             <div className="start-page">
-                <div className="image"></div>
+                <div className="image">
+                    <img src={Ilustra} alt="" />
+                </div>
                 <div className="info">
                     <h2>
                         <span>Seja bem-vindo </span>
                         <strong>O que deseja fazer?</strong>
                     </h2>
-                    <div className="button-row">                            
-                        <IonButton>
-                            <IonIcon icon={bookOutline}></IonIcon>
-                            <IonLabel>Estudar</IonLabel>
+                    <div className="button-row">    
+                                            
+                        <IonButton href="/listing">
+                            <div className="inner" >
+                                <IonIcon icon={bookOutline}></IonIcon>
+                                <IonLabel>Estudar</IonLabel>
+                            </div>
                         </IonButton>
                         
-                        <IonButton>
+                        <IonButton className="green" >
                             <div className="inner">                                
                                 <IonIcon icon={easelOutline}></IonIcon>
                                 <IonLabel>Dar aulas</IonLabel>

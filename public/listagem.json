@@ -1,0 +1,31 @@
+{
+    "professores": [
+      {
+        "nome": "Professor Daniel",
+        "lang": "React",
+        "desc": "<p>Sou desenvolvedor Vue.js e me especializo em criar interfaces interativas e dinâmicas. Trabalho com componentes reutilizáveis e sempre  </p><p> busco otimizar a performance e a experiência do usuário. Tenho experiência em integrar o front-end com o back-end. </p>",
+        "datas": {
+          "1": "12h - 18h",
+          "4": "12h - 18h"
+        }
+      },		
+      {
+          "nome": "Professora Maria",
+          "lang": "Vue",
+          "desc": "<p>Desenvolvedora back-end, especializada em PHP e Laravel</p>",
+          "datas" : {
+              "1": "12h - 18h",				
+              "2": "12h - 18h"
+          }
+      },
+      {
+          "nome": "Professor João",
+          "lang": "Vue",
+          "desc": "<p>Especializado em vue, e aplicações SPA</p>",
+          "datas" : {
+              "4": "12h - 18h",				
+              "5": "12h - 18h"
+          }
+      }
+    ]
+  }
