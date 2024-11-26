@@ -10,11 +10,11 @@ import {
   IonLabel
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { bookOutline, easelOutline } from 'ionicons/icons';
+import { bookOutline, easelOutline, heart } from 'ionicons/icons';
 
-import Home from './pages/Home';
 import Onboard from './pages/Onboard';
 import Inicio from './pages/Inicio';
+import Listagem from './pages/Listagem';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -48,9 +48,6 @@ import './theme/variables.css';
 
 setupIonicReact();
 
-
-//
-//
 const App = () => {
   return (
     <IonApp>
@@ -61,20 +58,21 @@ const App = () => {
           <IonRouterOutlet>            
             <Redirect exact={true} path='/' to="/onboard" />
             <Route  path="/onboard" render={() => <Onboard /> } />             
-            <Route  path="/home" render={() => <Inicio />  } />
+            <Route  path="/home" render={() => <Inicio />  } />       
+            <Route  path="/listing" render={() => <Listagem />  } />
           </IonRouterOutlet>
 
           {
             false && <IonTabBar slot="bottom">
 
-            <IonTabButton tab="onboard" href="/onboard">
+            <IonTabButton tab="listing" href="/listing">
               <IonIcon icon={easelOutline}></IonIcon>
-              <IonLabel>Onboard</IonLabel>
+              <IonLabel>Professores</IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab="home" href="/home">
-              <IonIcon icon={bookOutline}></IonIcon>
-              <IonLabel>Home</IonLabel>
+            <IonTabButton>
+              <IonIcon icon={heart}></IonIcon>
+              <IonLabel>Favoritos</IonLabel>
             </IonTabButton>
 
           </IonTabBar>
